@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,20 +16,101 @@
 		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<meta name="viewport" content="width=device-width" />
-	%sveltekit.head%
+
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		* {
+			font-family: 'Roboto', sans-serif;
+		}
+
+		h1,
+		h2,
+		h3,
+		.poppins {
+			font-family: 'Poppins', sans-serif;
+		}
+	</style>
 </head>
 
 <body class="bg-slate-950 text-white relative">
-	<div style="display: contents" class="relative z-[1]">%sveltekit.body%</div>
+	<div style="display: contents" class="relative z-[1]"></div>
 
 	<div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">
-		<div id="particles-js" class="absolute inset-0" />
+		<div id="particles-js" class="absolute inset-0">
 	</div>
+
 	<script>
 		particlesJS.load("particles-js", "assets/particles.json", function () {
 			console.log("callback - particles.js config loaded");
 		});
 	</script>
+
+	<header class="sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border-b border-solid py-4 bg-slate-950 border-violet-950" >
+	
+	<h1 class="font-medium">
+		<b class="font-bold poppins">Dirgh</b> <span class="">Kotharia</span>
+	</h1>
+	<div class="sm:flex items-center gap-4 hidden">
+		<a href="#projects"class="duration-200 hover:text-violet-400">
+			<p>Projects</p>
+		</a>
+		<a href="#about"class="duration-200 hover:text-violet-400">
+			<p>About Me</p>
+		</a>
+		<a href="#footer"class="duration-200 hover:text-violet-400">
+			<button class="relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950">
+				<div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"/>
+					<h4 class="relative z-9">Get in touch</h4>
+			</button>
+		</a>
+	</div>
+	</header>
+
+	<section id="introPage" class="lg:grid-cols-2 gap-10 py-8 sm:py-14">
+		<div class="lg:justify-center text-center lg:text-center gap-6 md:gap-8 lg:gap-10">
+			<h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
+				Hi! I'm <span class="poppins text-violet-400">Dirgh Kotharia !!</span> 
+				<br />
+				<br />
+			</h2>
+			<p class="text-base sm:text-lg md:text-xl">
+				<span class="text-violet-400">A Cloud Technology and Cybersecurity Enthusiast</span>
+			</p>
+		</div>
+	</section>
+
+	<footer class="py-20 sm:py-32 bg-black border-t border-solid border-violet-950 flex flex-col gap-4 sm:gap-8 justify-center items-center" id="footer">
+		<p class="px-4 py-2 bg-white text-slate-950 font-medium">
+			Connect with me &darr;
+		</p>
+		<div class="flex flex-col gap-4 items-center justify-center">
+			<p><b class="pr-2">Email</b> samuel_oak@gmail.com</p>
+			<p>
+				<b class="pr-2">GitHub</b>
+				<a href=" " target="_blank" class="text-violet-400">Dirgh-Kotharia
+					<sup class="">
+						<span class="text-xs scale-75 pl-0.5">
+							<i class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"/>
+						</span>
+					</sup>
+					</a>
+			</p>
+			<p>
+				<b class="pr-2">LinkedIn</b>
+				<a href=" " target="_blank" class="text-violet-400">Dirgh-Kotharia
+					<sup class="">
+						<span class="text-xs scale-75 pl-0.5">
+							<i class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"/>
+						</span>
+					</sup>
+				</a>
+			</p>
+		</div>
+	</footer>
+
 </body>
 
 </html>
